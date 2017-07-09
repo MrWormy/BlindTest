@@ -1,0 +1,160 @@
+body
+{
+    background-color: #FF6C41;
+    margin: 0;
+    font-family: sans-serif;
+}
+
+@keyframes anim
+{
+    0%{background-position: 0% 50%}
+    50%{background-position: 100% 50%}
+    100%{background-position: 0% 50%}
+}
+
+.wrapper {
+    width: 100%;
+    margin-top: 5ex;
+}
+
+.flex-container-column
+{
+    display: flex;
+    flex-direction: column;
+}
+
+.flex-container-row
+{
+    display: flex;
+}
+
+.flex-input-grow
+{
+    flex-grow: 1;
+}
+
+.flex-score
+{
+    background-color: #C22C01;
+    flex-grow: 1;
+    font-size: 2.5em;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    box-shadow: 5px 5px 1px 6px;
+    border-radius: 10px;
+}
+
+.score-wrapper
+{
+    text-align: center;
+}
+
+#players
+{
+    margin: auto;
+    width: 40%;
+}
+
+@media screen and (max-width: 600px){
+    #players
+    {
+        width: 65%;
+    }
+}
+
+#players input, #players button
+{
+    padding-left: 0.5em;
+    height: 3em;
+    margin-top: 0.5em;
+}
+
+#validatePlayers
+{
+    margin-left: 2em;
+}
+
+#scoreDisplay
+{
+    flex-grow: 1;
+}
+
+#next
+{
+    display: block;
+    padding: 0.2em;
+    font-size: 5em;
+    background: linear-gradient(135deg, #ddd9d8, #ef9959);
+    background-size: 200% 200%;
+    animation: anim 4s cubic-bezier(0.4, 0, 1, 1) infinite;
+    margin-left: 12px;
+    border: darkgray 6px outset;
+    border-radius: 10px;
+}
+
+#next:focus
+{
+    outline: none;
+}
+
+#next:active
+{
+    border-style: inset;
+}
+
+#playersScores
+{
+    justify-content: space-around;
+    flex-flow: wrap;
+    margin-top: 1.5em;
+    font-size: 3em;
+}
+
+#headResult
+{
+    justify-content: space-around;
+    flex-flow: wrap;
+    padding-bottom: 1.5em;
+    border-bottom: grey solid 1px;
+}
+
+#headResult button
+{
+    font-size: 3em;
+    width: 6em;
+}
+
+#headResult h1
+{
+    font-size: 3em;
+}
+
+#playersScores input
+{
+    font-size: inherit;
+    margin: 0.5em;
+    width: 1em;
+}
+
+#player
+{
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+#blindTest
+{
+    width: 100%;
+    height: 100vh;
+    flex-flow: wrap;
+    display: none;
+}
+
+#scores
+{
+    display: none;
+}
